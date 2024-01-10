@@ -18,7 +18,7 @@ header {
     border-radius: 10px;
     margin: 20px auto;
     padding: 1em 3rem;
-    width: 90%;
+    width: 80%;
 }
 
 #timetable {
@@ -27,14 +27,15 @@ header {
 }
 
 .dayTable {
-    grid-template-columns: 1fr minmax(300px, 1fr);
+    grid-template-columns: 0.5fr minmax(150px, 1fr);
 }
 
 .fullTable {
     grid-template-columns: 1fr repeat(5, minmax(100px, 1fr));
 }
 
-#times, .day {
+#times,
+.day {
     display: grid;
     grid-template-rows: repeat(12, 1fr);
     grid-gap: 10px;
@@ -67,14 +68,14 @@ li {
     list-style: none;
 }
 
-ul, h4, h3, h2, h1 {
+ul,
+h4,
+h3,
+h2,
+h1 {
     margin: 0;
     padding: 0;
 }
-
-
-
-
 
 /* button */
 #changeBtn {
@@ -87,28 +88,35 @@ ul, h4, h3, h2, h1 {
     cursor: pointer;
     border: none;
     border-radius: 8px;
-    background-color: #424769; /* Use the second color from the palette */
+    background-color: #424769;
     color: #fff;
     transition: background-color 0.3s, transform 0.3s;
     outline: none;
-  }
-  
-  #changeBtn:hover {
-    background-color: #7077A1; /* Use the third color for hover effect */
-  }
-  
-  #changeBtn:active {
-    background-color: #2D3250; /* Use the first color for the active/clicked state */
-    transform: scale(0.95);
-  }
+}
 
-  #buttonContainer{
+#changeBtn:hover {
+    background-color: #7077A1;
+}
+
+#changeBtn:active {
+    background-color: #2D3250;
+    transform: scale(0.95);
+}
+
+#buttonContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+}
 
-  }
+/* Responsive Styles */
+
+@media screen and (max-width: 600px) {
+    #timetableContainer {
+        width: 65%;
+    }
 
 
-  
+    
+}
