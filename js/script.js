@@ -1,39 +1,39 @@
 
 let currentStateOFTabel = false;
+Array.from(document.getElementsByClassName('day')).forEach(element => {
+    element.classList.toggle('hidden', ("d" + new Date().getDay()) !== element.id);
+});
 
-function changeDayAndFull() {
+
+
+function changeDayAndFull(event) {
+
+    const element = document.getElementById("timetable");
 
     if(currentStateOFTabel === false) {
-
-        Array.from(document.getElementsByClassName('day')).forEach(element => {
-            element.classList.toggle('hidden', ("d" + new Date().getDay()) !== element.id);
-    
-        });
-    
-        let element = document.getElementById("timetable");
-    
-        element.classList.add('dayTable');
-        element.classList.remove('fullTable');
-
-        currentStateOFTabel = true;
-
+        event.target.innerText = "Go to All days";
     }  else{
-
-        Array.from(document.getElementsByClassName('day')).forEach(element => {
-            element.classList.remove('hidden', ("d" + new Date().getDay()) !== element.id);
-    
-        });
-    
-        let element = document.getElementById("timetable");
-    
-        element.classList.remove('dayTable');
-        element.classList.add('fullTable');
-
-        currentStateOFTabel = false;
-
+        event.target.innerText = "Go to today";
     }
+
+
+    Array.from(document.getElementsByClassName('day')).forEach(element => {
+        if( ("d" + new Date().getDay()) !== element.id ){
+            element.classList.toggle('hidden');
+        }
+        
+    });
+
+    element.classList.toggle('dayTable');
+    element.classList.toggle('fullTable');
+
+    currentStateOFTabel = !currentStateOFTabel;
 
 }
 
 
 document.getElementById("changeBtn").addEventListener("click", changeDayAndFull);
+
+
+
+

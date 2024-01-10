@@ -6,46 +6,38 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #2D3250;
     color: #fff;
     text-align: center;
-    padding: 5px 0;
+    padding: 1.4em;
 }
 
-
-
-#timetableContainer{
-
-    background-color: white; /* Replace with your desired background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the shadow values as needed */
+#timetableContainer {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin: 20px auto;
-    padding: 3em;
+    padding: 1em 3rem;
     width: 90%;
-
 }
 
 #timetable {
     display: grid;
-    /* grid-template-columns: 1.5fr repeat(5, minmax(100px, 1fr));
-    grid-template-columns: 1.5fr minmax(100px, 1fr); */
-
-    /* grid-template-rows: repeat(12, 1fr); Add 12 rows */
     grid-gap: 10px;
 }
 
-.dayTable{
-    grid-template-columns: 1.5fr minmax(100px, 1fr);
+.dayTable {
+    grid-template-columns: 1fr minmax(300px, 1fr);
 }
 
-.fullTable{
-    grid-template-columns: 1.5fr repeat(5, minmax(100px, 1fr));
+.fullTable {
+    grid-template-columns: 1fr repeat(5, minmax(100px, 1fr));
 }
-
 
 #times, .day {
     display: grid;
-    grid-template-rows: repeat(12, 70px);
+    grid-template-rows: repeat(12, 1fr);
+    grid-gap: 10px;
 }
 
 main {
@@ -57,8 +49,66 @@ li p {
     margin: 0;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
+.colTitle {
+    background-color: #424769;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
 
+li {
+    list-style: none;
+}
+
+ul, h4, h3, h2, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+/* button */
+#changeBtn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #424769; /* Use the second color from the palette */
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s;
+    outline: none;
+  }
+  
+  #changeBtn:hover {
+    background-color: #7077A1; /* Use the third color for hover effect */
+  }
+  
+  #changeBtn:active {
+    background-color: #2D3250; /* Use the first color for the active/clicked state */
+    transform: scale(0.95);
+  }
+
+  #buttonContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+  }
+
+
+  
