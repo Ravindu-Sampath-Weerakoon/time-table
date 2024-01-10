@@ -25,40 +25,29 @@ header {
 
 }
 
-#timetable{
+#timetable {
     display: grid;
-    grid-template-columns: 1fr repeat(5, minmax(100px, 1fr)); /* Adjust the number of columns based on your needs */
+    /* grid-template-columns: 1.5fr repeat(5, minmax(100px, 1fr));
+    grid-template-columns: 1.5fr minmax(100px, 1fr); */
+
+    /* grid-template-rows: repeat(12, 1fr); Add 12 rows */
     grid-gap: 10px;
 }
 
-#times {
-    grid-column: 1;
+.dayTable{
+    grid-template-columns: 1.5fr minmax(100px, 1fr);
 }
 
-#d1, #d2, #d3, #d4, #d5 {
-    grid-column: span 1; /* Each grid item spans 5 columns */
+.fullTable{
+    grid-template-columns: 1.5fr repeat(5, minmax(100px, 1fr));
 }
 
-h4 {
-    background-color: #3498db;
-    padding: 10px;
-    text-align: center;
-    margin: 0;
-    color: #fff;
+
+#times, .day {
+    display: grid;
+    grid-template-rows: repeat(12, 70px);
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    border: 1px solid #ccc;
-    padding: 10px;
-}
-
-/* Additional styles for better aesthetics, you can modify them as needed */
 main {
     max-width: 800px;
     margin: 0 auto;
@@ -68,5 +57,8 @@ li p {
     margin: 0;
 }
 
+.hidden{
+    display: none;
+}
 
 
