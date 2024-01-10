@@ -1,6 +1,6 @@
 console.log("hello world");
 
-document.getElementById("header").innerText = "My time table".toUpperCase();
+document.getElementById("header").innerText = "time table".toUpperCase();
 
 var currentDate = new Date();
 var options = { weekday: 'long' };

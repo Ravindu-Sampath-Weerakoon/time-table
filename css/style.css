@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #e3e3e3;
 }
 
 header {
@@ -13,7 +13,19 @@ header {
 }
 
 
-main {
+
+#timetableContainer{
+
+    background-color: white; /* Replace with your desired background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the shadow values as needed */
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 3em;
+    width: 90%;
+
+}
+
+#timetable{
     display: grid;
     grid-template-columns: 1fr repeat(5, minmax(100px, 1fr)); /* Adjust the number of columns based on your needs */
     grid-gap: 10px;
